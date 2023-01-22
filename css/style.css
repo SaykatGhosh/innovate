@@ -1,0 +1,782 @@
+/* ==============  Google Fonts Linkup ==============  */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900;1000&family=Open+Sans:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* ============== Default Main code ============== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style-type: none;
+}
+.container{
+    width: 1408px;
+    margin: 0 auto;
+}
+
+/* ============== Default Main code ============== */
+:root{
+    /* Font  */
+    --nunito_font:'Nunito', sans-serif;
+    --poppins_font:'Poppins', sans-serif;
+    --openSans: 'Open Sans', sans-serif;
+    
+    
+    /* Font Weight  */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extraBold: 800;
+    --black_weight: 900;
+
+    /* color  */
+    --white: #fff;
+    --orange: #FF5538;
+
+    /* Transition  */
+    --transition: all linear 0.3s;
+
+    /* text-transform */
+    --capitalize: capitalize;
+
+
+}
+
+/* ============== common class style Start ============== */
+.cmn_para_text{
+    font-family: var(--nunito_font);
+    font-weight: var(--light);  
+    font-size: 18px;
+    line-height: 36px;
+    text-transform: var(--capitalize);
+}
+.cmn_btn{
+    font-family: var(--nunito_font);
+    font-weight: var(--light);  
+    font-size: 18px;
+    padding: 14px 28px;
+    border-radius: 18px;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.cmn_btn:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.sm_hd{
+    font-family: var(--poppins_font);
+    font-weight: var(--medium);
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: var(--capitalize);
+    color: #FF5538;
+}
+.lg_hd{
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 48px;
+    line-height: 67px;
+    text-transform: var(--capitalize);
+}
+/* ============== common class style End ============== */
+
+/* ============== Navbar Part Start Here ============== */
+
+#navbar{
+    padding-top: 30px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.nav_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 48px;
+}
+.menu_item{
+    font-family: var(--openSans);
+    font-weight: var(--medium);
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: #29313D;
+}
+.menu_arrow{
+    margin-left: 11px;
+    transition: all linear 0.5s;
+}
+.main_menu .menu_item:hover .menu_arrow{
+    transform: rotate(90deg);
+}
+
+/* ============== Navbar Part End Here ============== */
+#banner{
+    padding: 293px 0 272px 0;
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner_top_tringle{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner_main{
+    text-align: center;
+}
+.banner_heading{
+    width: 771px;
+    margin: 0 auto;
+}
+.banner_heading{
+    font-family: var(--poppins_font);
+    font-weight: var(--bold);
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    text-transform: var(--capitalize);
+    color: #29313D;
+}
+.banner_btn{
+    padding-top: 44px;
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+}
+.banner_para{
+    padding-top: 24px;
+    width: 547px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* animation start  */
+
+.snake_pink{
+    position: absolute;
+    top: 231px;
+    left: 155px;
+    animation: snake 3s infinite alternate linear;
+}
+@keyframes snake {
+    from {
+        top: 30%;
+    }
+
+    to {
+        bottom: 40%;
+    }
+}
+.cross_pink{
+    position: absolute;
+    top: 130px;
+    left: 296px;
+    animation: cross 3s infinite linear; 
+}
+@keyframes cross {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cross_blue{
+    position: absolute;
+    top: 359px;
+    right: 465px;
+    animation: cross 3s infinite linear; 
+}
+.cross_trs_pink{
+    position: absolute;
+    right: 314px;
+    left: 127px;
+    animation: cross 3s infinite linear; 
+}
+.big_round_pink{
+    position: absolute;
+    bottom: 83px;
+    left: 270px;
+    z-index: 999;
+    animation: cross 3s infinite linear; 
+}
+.round_pink{
+    position: absolute;
+    top: 110px;
+    left: 805px;
+    animation: cross 3s infinite linear; 
+}
+.blue_boll_m{
+    position: absolute;
+    top: 225px;
+    right: 780px;
+    animation: up_down 3s alternate infinite linear;
+}
+@keyframes up_down {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+
+
+
+.blue_boll_s{
+    position: absolute;
+    top: 154px;
+    right: 568px;
+}
+.pink_boll_trs_s{
+    position: absolute;
+    top: 224px;
+    left: 315px;
+}
+.blue_boll_lg{
+    position: absolute;
+    bottom: 252px;
+    left: 311px;
+    z-index: 0;
+}
+
+
+
+.snake_blue_big{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+.banner_btm_tringle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+.blue_boll_big{
+    position: absolute;
+    bottom: 2px;
+    right: 48px;
+}
+.cross_trs_pink_right{
+    position: absolute;
+    right: 701px;
+    bottom: 390px;
+    animation: cross 2s infinite linear; 
+}
+.cross_trs_pink_btm{
+    position: absolute;
+    bottom: 207px;
+    right: 856px;
+    animation: cross 2s infinite linear; 
+}
+.golden_boll{
+    position: absolute;
+    left: 0;
+    bottom: -163px;
+}
+/* ============== Banner part End here ============== */
+
+/* ============== Service part start here ============== */
+#service{
+    position: relative;
+    margin-top: -166px;
+    z-index: 999999;
+    padding-bottom: 50px;
+}
+.service_wrapper{
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
+
+.service_item{
+    width: 450px;
+    padding: 40px 46px 40px 30px;
+    box-shadow: 0px 44px 40px rgba(0, 0, 0, 0.02);
+    background-color: var(--white);
+}
+.service_img{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 34px;
+}
+.service_heading{
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 28px;
+    line-height: 45px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 16px;
+}
+/* ============== Service part End here ============== */
+
+/* ========= People part Start here ============ */
+#people{
+    margin: 82px 0 120px 0;
+    position: relative;
+}
+.people_heading{
+    width: 449px;
+}
+.people_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blank_screen{
+    position: relative;
+    width: 50%;
+    height: 521px;
+}
+.blank_content{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 110%;
+    background-color: #C4C4C4;
+    z-index: 999;
+}
+.people_about{
+    width: 50%;
+    height: 626px;
+    background: rgba(251, 243, 240, 0.8);
+    padding: 100px 0 0 185px;
+}
+.p_about_hd{
+    width: 570px;
+    font-family: var(--poppins_font);
+    font-weight: var(se);
+    font-size: 36px;
+    line-height: 50px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 20px;
+}
+.p_about_para{
+    width: 501px;
+    margin-bottom: 48px;
+}
+
+/* people animation  */
+.bamboo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.people_blue_boll{
+    position: absolute;
+    right: 84px;
+    top: 100px;
+    animation: cross 2s infinite linear; 
+}
+.p_round_pink{
+    position: absolute;
+    top: 140px;
+    left: 596px;
+    animation: cross 2s infinite linear; 
+
+}
+/* ========= People part End here ================== */
+
+
+
+/* ========= work part start here ================== */
+#work {
+    padding: 120px;
+    position: relative;
+}
+.work_snake_animation{
+    position: absolute;
+    content: url(../images/snake_people_down.png);
+    top: -250px;
+    left: 0;
+}
+
+.work_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 78px;
+}
+.work_list{
+    display: flex;
+    column-gap: 29px;
+    margin-bottom: 30px;
+}
+
+.work_heading{
+    width: 693px;
+}
+.mobile_app{
+    width: 575px;
+    background-color: var(--white);
+    box-shadow: 0px 44px 40px rgba(0, 0, 0, 0.02);
+}
+.mobile_app_img{
+    height: 330px;
+    background-color: #C4C4C4;
+}
+.mobile_app_content{
+    padding: 30px;
+}
+.work_content_title{
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 28px;
+    line-height: 39px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 10px;
+}
+.work_content_sub{
+    font-family: var(--nunito_font);
+    font-weight: var(--medium);
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: var(--capitalize);
+    color: var(--orange);
+}
+.e-commerce{
+    width: 810px;
+    background-color: var(--white);
+    box-shadow: 0px 44px 40px rgba(0, 0, 0, 0.02);
+}
+.e-commerce_img{
+    height: 330px;
+    background-color: #C4C4C4;
+}
+
+/* ========= work part End here ================== */
+
+
+/* ========= Counting part Start here ================== */
+#counting{
+    padding: 120px 0;
+    background-color: #FDF9F8;;
+    position: relative;
+}
+
+.count_animation_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.count_rolling{
+    position: absolute;
+    top: 230px;
+    left: 49px;
+
+
+}
+
+.counting_wrapper{
+    display: flex;
+    column-gap: 100px;
+    position: relative;
+    z-index: 999;
+}
+.count_wrapper{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 548px;
+}
+.count_serial{
+    padding: 74px 60px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 44px 40px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+.count_content{
+    width: 570px;
+}
+.count_heading{
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 40px;
+    line-height: 56px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+}
+.count_para{
+    font-family: var(--nunito_font);
+    font-weight: var(--regular);
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+}
+.count_heading{
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 48px;
+    line-height: 67px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    padding-bottom: 20px;
+}
+.count_btn{
+    margin-top: 45px;
+}
+
+
+/* ========= Counting part End here ================== */
+
+/* ========== Brands part start here ============== */
+#brands{
+    padding: 120px 0;
+}
+.brands_heading{
+    width: 849px;
+    font-family: var(--poppins_font);
+    font-weight: var(--semibold);
+    font-size: 48px;
+    line-height: 67px;
+    text-align: center;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.brands_wrapper{
+    display: flex;
+    column-gap: 30px;
+}
+
+.brands_item{
+    padding: 20px 0;
+    background-color: #FDF9F8;
+}
+
+/* ========== Brands part End here ============== */
+
+/* ========== customer part start here ============ */
+#customer{
+    padding: 120px 0;
+    background-color: #FDF9F8;
+}
+.customer_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+}
+.customer_heading{
+    font-family: 'Poppins';
+    font-weight: var(--semibold);
+    font-size: 48px;
+    line-height: 67px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 60px;
+}
+.customer_icon_wrapper{
+    display: flex;
+    column-gap: 28px;
+}
+.customer_icon_item{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color:#C4C4C4;
+}
+.customer_para{
+    width: 690px;
+    margin-top: 60px;
+}
+.jonathon{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+.jonathon_title{
+    font-family: var(--openSans);
+    font-weight: var(--semibold);
+    font-size: 36px;
+    line-height: 65px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+}
+.j_arrows{
+    display: flex;
+    column-gap: 24px;
+}
+.jl_arrows{
+    height: 61px;
+    width: 61px;
+    background-color: #FFDDD7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #130F26;
+    transition: var(--transition);
+}
+.jr_arrows{
+    height: 61px;
+    width: 61px;
+    background-color: #FFDDD7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #130F26;
+    transition: var(--transition);
+}
+.jl_arrows:hover{
+    background-color: #FF5538;
+}
+.jr_arrows:hover{
+    background-color: #FF5538;
+}
+
+
+.customer_img{
+    width: 501px;
+    height: 557px;
+    background: #C4C4C4;
+    border-radius: 30px;
+    overflow: hidden;
+}
+/* ========== customer part End here ============ */
+
+/* ======== projects part Start here ============ */
+#project{
+    padding: 100px 0;
+    background-color: #FFD7C8;
+    position: relative;
+}
+.project_animation{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.project_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_subTitle{
+    font-family: var(--poppins_font);
+    font-weight: var(--regular);
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    padding-bottom: 7px;
+
+}
+.project_title{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 67px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+}
+.underline{
+    border-top: 1px solid #29313D;
+    margin: 48px 0 24px 0;
+    opacity: 0.2;
+}
+/* ======== projects part End here ============ */
+
+
+/* ============== footer part start here ============== */
+#footer{
+    padding: 140px 0 80px 0;
+}
+.footer_wrapper{
+    display: flex;
+}
+.footer_info{
+    width: 449px;
+}
+.footer_logo{
+    margin-bottom: 44px;
+}
+.footer_heading{
+    font-family: 'Open Sans';
+    font-weight: var(--semibold);
+    font-size: 24px;
+    line-height: 34px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 48px;
+}
+.features{
+    margin-left: 190px;
+}
+.products{
+    margin-left: 160px;
+}
+.support{
+    margin-left: 160px;
+}
+.footer_main{
+    display: inline-block;
+    font-family: var(--nunito_font);
+    font-weight: var(--semibold);
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: var(--capitalize);
+    color: #29313D;
+    margin-bottom: 30px;
+}
+/* ============== footer part end here ============== */
+/* ============== copyright part start here ============== */
+#copyright{
+    padding: 80px 57px;
+}
+.cmn_copyright_text{
+    font-family: var(--nunito_font);
+    font-weight: var(--regular);
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #29313D;
+    opacity: 0.9;
+}
+.copyright_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.condition{
+    display: flex;
+    column-gap: 60px;
+}
+/* ============== copyright part end here ============== */
